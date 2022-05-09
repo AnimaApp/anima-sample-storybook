@@ -15,7 +15,6 @@
     "react-figma-plugin-ds": "^2.3.0",
     "react-scripts": "5.0.0",
     "react-spinners": "^0.11.0",
-    "storybook-anima": "^1.6.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -23,9 +22,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
+    "storybook": "yarn clean && start-storybook -p 6006 --no-manager-cache -s public",
     "build-storybook": "build-storybook -s public",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "clean": "rm -rf ./node_modules/.cache/storybook/babel"
   },
   "eslintConfig": {
     "extends": [
@@ -71,6 +71,8 @@
     "babel-plugin-react-docgen": "^4.2.1",
     "lodash": "^4.17.21",
     "storybook-addon-ghostwriter": "^1.0.0",
-    "webpack": "^5.67.0"
+    "webpack": "^5.67.0",
+    "webpack-babel-env-deps": "^1.6.4",
+    "zip-webpack-plugin": "^4.0.1"
   }
 }

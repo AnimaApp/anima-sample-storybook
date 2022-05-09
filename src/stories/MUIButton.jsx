@@ -1,9 +1,14 @@
 import Button from '@mui/material/Button';
+import OtherImport from '../other';
 
 import React from 'react';
 
 export const MUIButton = ({ label, ...props }) => {
   return (
-    <Button {...props}>{label}</Button>
+    <>
+      <span>what a life</span>
+      <OtherImport></OtherImport>
+      <Button {...props}>{label}</Button>
+    </>
   );
 };
